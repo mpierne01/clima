@@ -13,3 +13,4 @@
 - TODO: LOGCAT_TAG
 - TODO: Set LOCATION_PROVIDER
 - TODO: Add an OnClickListener to the changeCityButton
+- TODO: Add onResume() here:

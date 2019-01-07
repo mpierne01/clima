@@ -97,7 +97,13 @@ public class WeatherController extends AppCompatActivity {
     }
 
 
-    // TODO: Add onResume() here:
+    // onResume() life cyle callback:
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(LOGCAT_TAG, "onResume() called");
+        if(mUseLocation) getWeatherForCurrentLocation();
+    }
 
 
 
