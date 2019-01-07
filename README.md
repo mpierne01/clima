@@ -14,3 +14,9 @@
 - TODO: Set LOCATION_PROVIDER
 - TODO: Add an OnClickListener to the changeCityButton
 - TODO: Add onResume() here:
+- TODO: Add getWeatherForNewCity(String city)
+- TODO: Add getWeatherForCurrentLocation()
+- TODO: Add letsDoSomeNetworking(RequestParams params)
+- TODO: Add updateUI() here:
+- TODO: Add updateUI()
+- TODO: Add onPause() 
