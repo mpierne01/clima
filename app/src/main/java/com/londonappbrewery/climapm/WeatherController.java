@@ -83,8 +83,17 @@ public class WeatherController extends AppCompatActivity {
 
 
 
-        // TODO: Add an OnClickListener to the changeCityButton here:
+        // Add an OnClickListener to the changeCityButton here:
+        changeCityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(WeatherController.this, ChangeCityController.class);
 
+                // Using startActivityForResult since we just get back the city name.
+                // Providing an arbitrary request code to check against later.
+                startActivityForResult(myIntent, NEW_CITY_CODE);
+            }
+        });
     }
 
 
