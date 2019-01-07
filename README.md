@@ -19,4 +19,10 @@
 - TODO: Add letsDoSomeNetworking(RequestParams params)
 - TODO: Add updateUI() here:
 - TODO: Add updateUI()
-- TODO: Add onPause() 
+- TODO: Add onPause()
+
+## Weather Data Model
+- TODO: Declare the member variables
+- TODO: Create a WeatherDataModel from a JSO
+- TODO: Uncomment to this to get the weather image name from the condition:
+- TODO: Create getter methods for temperature, city, and icon name:
