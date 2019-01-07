@@ -107,7 +107,24 @@ public class WeatherController extends AppCompatActivity {
 
 
 
-    // TODO: Add getWeatherForNewCity(String city) here:
+    // Callback received when a new city name is entered on the second screen.
+    // Checking request code and if result is OK before making the API call.
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        Log.d(LOGCAT_TAG, "onActivityResult() called");
+
+        if (requestCode == NEW_CITY_CODE) {
+            if (resultCode == RESULT_OK) {
+                String city = data.getStringExtra("City");
+                Log.d(LOGCAT_TAG, "New city is " + city);
+
+                mUseLocation = false;
+                getWeatherForNewCity(city);
+            }
+        }
+    }
 
 
 
