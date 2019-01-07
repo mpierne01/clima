@@ -38,7 +38,7 @@ public class WeatherController extends AppCompatActivity {
     final String WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather";
 
     // App ID to use OpenWeather data
-    final String APP_ID = "e72ca729af228beabd5d20e3b7749713";
+    final String APP_ID = "183884856c01c37b847fccdcbf90d6e3";
 
     // Time between location updates (5000 milliseconds or 5 seconds)
     final long MIN_TIME = 5000;
@@ -74,10 +74,10 @@ public class WeatherController extends AppCompatActivity {
         // Can write: mCityLabel = findViewById(R.id.locationTV);
         // Instead of: mCityLabel = (TextView) findViewById(R.id.locationTV);
 
-        mCityLabel = findViewById(R.id.locationTV);
-        mWeatherImage = findViewById(R.id.weatherSymbolIV);
-        mTemperatureLabel = findViewById(R.id.tempTV);
-        ImageButton changeCityButton = findViewById(R.id.changeCityButton);
+        mCityLabel = (TextView) findViewById(R.id.locationTV);
+        mWeatherImage = (ImageView) findViewById(R.id.weatherSymbolIV);
+        mTemperatureLabel = (TextView) findViewById(R.id.tempTV);
+        ImageButton changeCityButton = (ImageButton) findViewById(R.id.changeCityButton);
 
         // Add an OnClickListener to the changeCityButton here:
         changeCityButton.setOnClickListener(new View.OnClickListener() {
