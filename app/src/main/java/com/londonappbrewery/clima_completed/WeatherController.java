@@ -1,3 +1,5 @@
+package com.londonappbrewery.clima_completed;
+
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
@@ -26,9 +28,6 @@ import cz.msebera.android.httpclient.Header;
 
 
 
-
-
-
 public class WeatherController extends AppCompatActivity {
 
     // Request Codes:
@@ -38,8 +37,8 @@ public class WeatherController extends AppCompatActivity {
     // Base URL for the OpenWeatherMap API. More secure https is a premium feature =(
     final String WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather";
 
-    // App ID to use OpenWeather data  MUST ADD YOUR OWN TO WORK
-    final String APP_ID = "183884856c01c37b847fccdcbf90d6e3";
+    // App ID to use OpenWeather data
+    final String APP_ID = "e72ca729af228beabd5d20e3b7749713";
 
     // Time between location updates (5000 milliseconds or 5 seconds)
     final long MIN_TIME = 5000;
@@ -50,10 +49,9 @@ public class WeatherController extends AppCompatActivity {
     // Don't want to type 'Clima' in all the logs, so putting this in a constant here.
     final String LOGCAT_TAG = "Clima";
 
-    // TODO: Set LOCATION_PROVIDER here:
-
-
-
+    // Set LOCATION_PROVIDER here. Using GPS_Provider for Fine Location (good for emulator):
+    // Recommend using LocationManager.NETWORK_PROVIDER on physical devices (reliable & fast!)
+    final String LOCATION_PROVIDER = LocationManager.GPS_PROVIDER;
 
     // Member Variables:
     boolean mUseLocation = true;
@@ -81,8 +79,6 @@ public class WeatherController extends AppCompatActivity {
         mTemperatureLabel = findViewById(R.id.tempTV);
         ImageButton changeCityButton = findViewById(R.id.changeCityButton);
 
-
-
         // Add an OnClickListener to the changeCityButton here:
         changeCityButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,8 +101,6 @@ public class WeatherController extends AppCompatActivity {
         if(mUseLocation) getWeatherForCurrentLocation();
     }
 
-
-
     // Callback received when a new city name is entered on the second screen.
     // Checking request code and if result is OK before making the API call.
     @Override
@@ -125,7 +119,6 @@ public class WeatherController extends AppCompatActivity {
             }
         }
     }
-
 
     // Configuring the parameters when a new city has been entered:
     private void getWeatherForNewCity(String city) {
@@ -282,5 +275,14 @@ public class WeatherController extends AppCompatActivity {
     }
 
 }
+
+
+
+
+
+
+
+
+
 
 
